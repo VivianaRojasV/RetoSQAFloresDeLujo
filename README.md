@@ -167,6 +167,11 @@ public void volverBusqueda(){
     GoogleChromeDriver.driver.findElement(florezDeLujoPage.getBtnVolver()).click();
 }
 ```
+_Abrir link de contacto con la tienda por Whatsapp_
+```
+public void hacerPedido () throws InterruptedException {GoogleChromeDriver.driver.findElement(florezDeLujoPage.getBtnPedido()).click();
+     Thread.sleep(6000);}
+```
 _Al finalizar la búsqueda del último producto, se debe hacer el método de cerrar página._
 ```
 public void cerrarPagina(){
