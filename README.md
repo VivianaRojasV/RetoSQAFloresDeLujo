@@ -93,7 +93,7 @@ public class LecturaExcel {
 ```
 ## Paquete Pages
 _Clase Page_
-_En está realizamos las relacionamos la xpath que son los identificadores del campo de texto “buscar producto” y del botón “buscar” dentro de la pagina https://floresdelujo.co/._
+_En está clase relacionamos los xpath; que son los identificadores del campo de texto “buscar producto”, "Escribanos al whatsapp" y del botón “buscar” dentro de la pagina https://floresdelujo.co/._
 _También contamos con los métodos Get para hacer los llamados a los elementos y realizar el retorno a la tienda, esto se realiza por cada producto._
 _El método Set nos permite realizar la validación del producto encontrado en la página por el producto a buscar._
 ```
@@ -221,7 +221,7 @@ public void busqueElProducto() throws IOException {
 }
 ```
 _QWhen
-_Este realiza la accion que está a prueba 2 (hacer pedido por Whatsapp)_
+_Este realiza la acción que está a prueba 2 (hacer pedido por Whatsapp)_
 ```
 @When("^hacer pedido por whatsapp$")
      public void hacer_pedido_por_whatsapp() throws InterruptedException {
@@ -239,4 +239,5 @@ public void podreVerProductoEnPantalla() {
 }
 ```
 ## Conclusiones
-_Al realizar la prueba podemos practicar los método y patrones para la realización de pruebas automatizas, detallando la función de cada uno de sus componentes a ejecutar._
+_Al realizar la prueba podemos practicar los métodos y patrones para la realización de pruebas automatizas, detallando la función de cada uno de sus componentes a ejecutar._
+
