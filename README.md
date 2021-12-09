@@ -1,6 +1,7 @@
 # RetoSQAFloresDeLujo
 
 _El presente proyecto es realizado para dar solución al reto propuesto en el Semillero de Automatización de pruebas realizado por la empresa SQA. En el podrá evidenciar el uso de herramientas aplicadas para su realización. La practica se realizará en la página https://floresdelujo.co/, la cual es una página para venta de arreglos florares en la ciudad de Medellín y sus alrededores, en ella podemos evidenciar que es bastante estática, lo que quiere decir es que es bastante fácil de usar, amigable y clara para que el cliente pueda ver los productos ofrecidos por empresa. En la página podemos encontrar el cajón de texto para buscar productos y más opciones de búsqueda o categorías para diferentes ocasiones especiales y demás, información de contacto y un enlace para asesoría por WhatsApp._
+
 ## Las herramientas usadas para su procedimiento fueron: 
 
 * IDEA IntelliJ 
@@ -18,12 +19,14 @@ _El presente proyecto es realizado para dar solución al reto propuesto en el Se
 ## Requerimiento del reto :bulb:
 
 _El reto impuesto debía cumplir con lo siguiente:_
+
 _Leer un archivo de Excel que contiene como mínimo 5 productos escogidos dentro de la página https://floresdelujo.co/, El archivo de Excel debía ser creado por cada participante del reto._
 _La automatización debe buscar cada uno los productos enlistados en el Excel dentro de la página, una vez encontrado dentro de la búsqueda seleccionarlo y realizar la validación del nombre del producto buscado sea igual al relacionado dentro del archivo de Excel._
 
 _Adicional a lo requerido para este reto, se le añade la función pedido, dando un valor agregado a la entrega, esta función nos abre una nueva pestaña para contactar a la tienda por medio de la plataforma Whatsapp_
 
 ## Pasos de la automatización :arrow_forward:
+
 _Abrir el navegador y buscar la pagina https://floresdelujo.co/._
 _Abrir archivo de Excel y leer el primer nombre del producto._
 _Ubicar el cajón de texto “buscar producto” y colocar el nombre de la lista (esta acción se realizará por cada uno de los productos enlistados)._
@@ -40,6 +43,7 @@ _Explicaremos el código implementado._
 ### Paquete Driver
 
 _Clase GoogleChromeDriver._
+
 _En la clase GoogleChromeDriver se crea un método ChromeDriver con parámetro de String o link, este nos permite abrir el navegador y realizar la búsqueda de la pagina https://floresdelujo.co/._
 ```
 public static void chromeWebDriver(String url){
@@ -53,7 +57,9 @@ public static void chromeWebDriver(String url){
 
 ```
 ### Paquete Files
+
 _Clase lectura de Excel._
+
 _En la clase LecturaExcel creamos un método de lectura que tiene como ejercicio leer una archivo de Excel. Contamos dos parámetros a leer String rutaDeExcel y Strin hojaDeExcel. En el parámetro de ruta se indicará en lugar donde se encuentra el archivo que contiene la lista de productos y con el parámetro de hoja de Excel se da el nombre de la hoja del archivo “búsqueda reto.xlxs”._
 _Retornando la información en una arraylist._
 ```
@@ -93,7 +99,9 @@ public class LecturaExcel {
     }
 ```
 ## Paquete Pages
+
 _Clase Page_
+
 _En está clase relacionamos los xpath; que son los identificadores del campo de texto “buscar producto”, "Escribanos al whatsapp" y del botón “buscar” dentro de la pagina https://floresdelujo.co/._
 _También contamos con los métodos Get para hacer los llamados a los elementos y realizar el retorno a la tienda, esto se realiza por cada producto._
 _El método Set nos permite realizar la validación del producto encontrado en la página por el producto a buscar._
@@ -131,8 +139,11 @@ _El método Set nos permite realizar la validación del producto encontrado en l
 
 ```
 ## Paquete Steps
+
 _Clase Step._
-_Aquí encontraremos los métodos del paso a paso de la prueba._
+
+_Aquí encontraremos los métodos del paso a paso de la prueba:_
+
 _Abrir Pagina._
 ```
 public void abrirPagina(){
@@ -180,6 +191,7 @@ public void cerrarPagina(){
 }
 ```
 ## Paquete Runner
+
 _Clase Runner_
 
 _En este paquete encontramos las herramientas para realizar la prueba (son quienes ejecutaran la prueba)._
@@ -195,8 +207,11 @@ public class FlorezDeLujoRunners {
 }
 ```
 ## Paquete Features
+
 _FloresDeLujo.features._
+
 _En este paquete encontramos la información del escenario o prueba a realizar, en donde:_
+
 _Given = Recibe el contexto._
 
 _When= En donde se realizan las acciones._
@@ -211,10 +226,14 @@ Scenario: Buscar arreglo floral
     And hacer pedido por whatsapp
     Then podre ver producto en pantalla
 ```
-## Paquete StepDefinitions
+## Paquete 
+
 _Paquete StepDefinitions._
+
 _Aquí podemos especificar el del sistema de pruebas, en la cual se dividen en tres:_
+
 _@Given_
+
 _Condiciones previas a la prueba (abrir pagina https://floresdelujo.co/)_
 ```
 @Given("^que me encuentro en la pagina de FlorezDeLujo$")
@@ -223,6 +242,7 @@ public void queMeEncuentroEnLaPaginaDeFlorezDeLujo() {
 }
 ```
 _@When_
+
 _Este realiza la acción que está en prueba (buscar producto)_
 ```
 @When("^busque el producto$")
@@ -230,7 +250,8 @@ public void busqueElProducto() throws IOException {
      florezDeLujoSteps.busquedaYValidacionDeProductos();
 }
 ```
-_@When
+_@When_
+
 _Este realiza la acción que está a prueba 2 (hacer pedido por Whatsapp)_
 ```
 @When("^hacer pedido por whatsapp$")
@@ -240,6 +261,7 @@ _Este realiza la acción que está a prueba 2 (hacer pedido por Whatsapp)_
 ```
 
 _@Then_
+
 _Comprueba que se cumple la condición solicitada. Esto suele ser en forma de afirmación de valores o verificación de la interacción con simulacros._
 ```
 @Then("^podre ver producto en pantalla$")
@@ -249,5 +271,6 @@ public void podreVerProductoEnPantalla() {
 }
 ```
 ## Conclusiones
+
 _Al realizar la prueba podemos practicar los métodos y patrones para la realización de pruebas automatizas, detallando la función de cada uno de sus componentes a ejecutar._
 
