@@ -155,11 +155,11 @@ public void validarElementoEnPantalla(String producto){
 _Búsqueda y validación de productos en el archivo Excel con los datos a buscar y se realiza con un ciclo para leer toda la lista._
 ```
 public void busquedaYValidacionDeProductos () throws IOException {
-    for (int i = 0; i < lecturaExcel.leerDatosDeHojaDeExcel("busqueda reto.xlsx", "Hoja1").size(); i++) {
-        buscarElementoEnFloresDeLujo(lecturaExcel.leerDatosDeHojaDeExcel("busqueda reto.xlsx", "Hoja1").get(i).get("Productos"));
-        validarElementoEnPantalla(lecturaExcel.leerDatosDeHojaDeExcel("busqueda reto.xlsx", "Hoja1").get(i).get("Productos"));
-        volverBusqueda();
-    }
+        for (int i = 0; i < lecturaExcel.leerDatosDeHojaDeExcel("busqueda reto.xlsx", "Hoja1").size(); i++) {
+            buscarElementoEnFlorezDeLujo(lecturaExcel.leerDatosDeHojaDeExcel("busqueda reto.xlsx", "Hoja1").get(i).get("Productos"));
+            validarElementoEnPantalla(lecturaExcel.leerDatosDeHojaDeExcel("busqueda reto.xlsx", "Hoja1").get(i).get("Productos"));
+            volverBusqueda();
+        }
 ```
 _Botón de regreso a la tienda para encontrar nuevamente el campo de texto para realización del siguiente producto a buscar._
 ```
