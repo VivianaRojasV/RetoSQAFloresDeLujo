@@ -225,7 +225,7 @@ public void busqueElProducto() throws IOException {
      florezDeLujoSteps.busquedaYValidacionDeProductos();
 }
 ```
-_QWhen
+_@When
 _Este realiza la acción que está a prueba 2 (hacer pedido por Whatsapp)_
 ```
 @When("^hacer pedido por whatsapp$")
