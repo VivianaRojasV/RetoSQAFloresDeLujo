@@ -238,3 +238,5 @@ public void podreVerProductoEnPantalla() {
      florezDeLujoSteps.cerrarPagina();
 }
 ```
+## Conclusiones
+_Al realizar la prueba podemos practicar los método y patrones para la realización de pruebas automatizas, detallando la función de cada uno de sus componentes a ejecutar._
