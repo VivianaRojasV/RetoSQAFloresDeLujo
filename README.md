@@ -22,6 +22,7 @@ _Leer un archivo de Excel que contiene como mínimo 5 productos escogidos dentro
 _La automatización debe buscar cada uno los productos enlistados en el Excel dentro de la página, una vez encontrado dentro de la búsqueda seleccionarlo y realizar la validación del nombre del producto buscado sea igual al relacionado dentro del archivo de Excel._
 
 _Adicional a lo requerido para este reto, se le añade la función pedido, dando un valor agregado a la entrega, esta función nos abre una nueva pestaña para contactar a la tienda por medio de la plataforma Whatsapp_
+
 ## Pasos de la automatización :arrow_forward:
 _Abrir el navegador y buscar la pagina https://floresdelujo.co/._
 _Abrir archivo de Excel y leer el primer nombre del producto._
@@ -180,6 +181,7 @@ public void cerrarPagina(){
 ```
 ## Paquete Runner
 _Clase Runner_
+
 _En este paquete encontramos las herramientas para realizar la prueba (son quienes ejecutaran la prueba)._
 _Usaremos Cucumber con Serenity._
 ```
@@ -196,8 +198,11 @@ public class FlorezDeLujoRunners {
 _FloresDeLujo.features._
 _En este paquete encontramos la información del escenario o prueba a realizar, en donde:_
 _Given = Recibe el contexto._
+
 _When= En donde se realizan las acciones._
+
 _Then= Los resultados de las acciones se comparan con las expectativas._
+
 _En los Step Definion explicaremos su función._
 ```
 Scenario: Buscar arreglo floral
