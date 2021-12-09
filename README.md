@@ -21,7 +21,7 @@ _El reto impuesto debía cumplir con lo siguiente:_
 _Leer un archivo de Excel que contiene como mínimo 5 productos escogidos dentro de la página https://floresdelujo.co/, El archivo de Excel debía ser creado por cada participante del reto._
 _La automatización debe buscar cada uno los productos enlistados en el Excel dentro de la página, una vez encontrado dentro de la búsqueda seleccionarlo y realizar la validación del nombre del producto buscado sea igual al relacionado dentro del archivo de Excel._
 
-_Adicional a lo requerido para este reto, se le añade la función pedido, dando un valor agregado a le entrega, esta función nos abre una nueva pestaña para contactar a la tienda por medio de la plataforma Whatsapp_
+_Adicional a lo requerido para este reto, se le añade la función pedido, dando un valor agregado a la entrega, esta función nos abre una nueva pestaña para contactar a la tienda por medio de la plataforma Whatsapp_
 ## Pasos de la automatización :arrow_forward:
 _Abrir el navegador y buscar la pagina https://floresdelujo.co/._
 _Abrir archivo de Excel y leer el primer nombre del producto._
